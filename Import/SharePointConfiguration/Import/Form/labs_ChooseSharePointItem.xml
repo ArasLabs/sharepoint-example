@@ -1,0 +1,251 @@
+﻿<AML>
+ <Item type="Form" id="4ADE82D502A64E879CB67E2A700B14CA" action="add">
+  <category_form>0</category_form>
+  <height>620</height>
+  <stylesheet><![CDATA[../styles/default.css]]></stylesheet>
+  <width>980</width>
+  <name>labs_ChooseSharePointItem</name>
+  <Relationships>
+   <Item type="Body" id="89D5AD8ED4494790A1D5B0D974D68D21" action="add">
+    <sort_order>128</sort_order>
+    <source_id keyed_name="labs_ChooseSharePointItem" type="Form">4ADE82D502A64E879CB67E2A700B14CA</source_id>
+    <Relationships>
+     <Item type="Field" id="2272D239CEF846BA8E0DF86EDC43B3D4" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[<style>
+  #dialogBackground {
+    border: 2px solid #CBD5E0; 
+    height: 393px; 
+    width: 383px;
+  }
+  #dialogHeader {
+    background-color: #E2E8F0; 
+    height: 40px; 
+    width: 383px;
+  }
+</style>
+<div id="dialogBackground"> 
+  <div id="dialogHeader"> </div>
+</div>]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="89D5AD8ED4494790A1D5B0D974D68D21" type="Body">89D5AD8ED4494790A1D5B0D974D68D21</source_id>
+      <tab_stop>1</tab_stop>
+      <x>0</x>
+      <y>7</y>
+      <z_index>-100</z_index>
+      <name>background</name>
+     </Item>
+     <Item type="Field" id="E97D8B2FEEE74E7BA58D0C239EFBAF6D" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[<style>
+    #tableContainer {
+        /**border: 2px solid #CBD5E0;**/
+        padding: 0px;
+        height: 223px;
+        width: 354px;
+        overflow: auto;
+    }
+
+    #sharepointItemTable {
+        /* width: 354px; */
+        width: 100%;
+    }
+
+    #sharepointItemTable,
+    #sharepointItemTable th,
+    #sharepointItemTable td {
+        border-collapse: collapse;
+        border: 1px solid #718096;
+        text-align: left;
+        color: #2D3748;
+    }
+
+    #sharepointItemTable th {
+        background-color: #A0AEC0;
+        border: 1px solid #A0AEC0;
+    }
+
+    #sharepointItemTable th,
+    #sharepointItemTable td {
+        padding: 3px;
+    }
+
+    #sharepointItemTable tr:nth-child(2n+1) {
+        background-color: #E2E8F0;
+    }
+
+    .selectedItemRow {
+        border-color: #ECC94B !important;
+        background-color: #F6E05E !important;
+    }
+</style>
+
+<div id="tableContainer">
+    <table id="sharepointItemTable">
+        <thead>
+            <tr>
+                <th id="th_id">ID</th>
+                <th id="th_name">Name</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="89D5AD8ED4494790A1D5B0D974D68D21" type="Body">89D5AD8ED4494790A1D5B0D974D68D21</source_id>
+      <tab_stop>1</tab_stop>
+      <x>16</x>
+      <y>116</y>
+      <name>item_table</name>
+     </Item>
+     <Item type="Field" id="961DE29E06DE4327BF451298939BD662" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[<style>
+  #WelcomeMessage {
+    color: #4A5568; 
+    font-size: 12px;
+  }
+</style>
+
+<p id="WelcomeMessage"></p>]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>640</sort_order>
+      <source_id keyed_name="89D5AD8ED4494790A1D5B0D974D68D21" type="Body">89D5AD8ED4494790A1D5B0D974D68D21</source_id>
+      <tab_stop>1</tab_stop>
+      <x>16</x>
+      <y>12</y>
+      <name>message_container</name>
+     </Item>
+     <Item type="Field" id="E927DF9772F64A96B20DF0A2B9622F51" action="add">
+      <border_width>0</border_width>
+      <display_length>200</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>dropdown</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>1</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">SharePoint List</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>768</sort_order>
+      <source_id keyed_name="89D5AD8ED4494790A1D5B0D974D68D21" type="Body">89D5AD8ED4494790A1D5B0D974D68D21</source_id>
+      <tab_stop>1</tab_stop>
+      <text_align>left</text_align>
+      <x>16</x>
+      <y>60</y>
+      <name>sharepoint_lists</name>
+     </Item>
+     <Item type="Field" id="ED3E4DFFB9C34DAABB6C0B5077C1448C" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[<style>
+  #signInButton {
+    border:1px solid #4A5568; 
+    background-color: #FFF; 
+    color: #4A5568; 
+    padding: 3px 10px 3px 10px;
+  }
+  #signInButton:hover {
+    background-color: #4A5568 !important; 
+    color: #FFF !important; 
+  }
+</style>
+
+<button id="signInButton">Sign In</button>]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>384</sort_order>
+      <source_id keyed_name="89D5AD8ED4494790A1D5B0D974D68D21" type="Body">89D5AD8ED4494790A1D5B0D974D68D21</source_id>
+      <tab_stop>1</tab_stop>
+      <x>312</x>
+      <y>16</y>
+      <name>signin_container</name>
+     </Item>
+     <Item type="Field" id="E0569822409148E3A83EC8D412588B96" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[<style>
+  #submitButton {
+    border:1px solid #4A5568; 
+    background-color: #4A5568 !important; 
+    color: #FFF !important; 
+    padding: 3px 10px 3px 10px;
+  }
+  #submitButton:hover {
+    background-color: #FFF !important; 
+    color: #4A5568 !important; 
+  }
+</style>
+
+<button id="submitButton">Submit</button>]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>512</sort_order>
+      <source_id keyed_name="89D5AD8ED4494790A1D5B0D974D68D21" type="Body">89D5AD8ED4494790A1D5B0D974D68D21</source_id>
+      <tab_stop>1</tab_stop>
+      <x>312</x>
+      <y>361</y>
+      <name>submit_container</name>
+     </Item>
+    </Relationships>
+   </Item>
+   <Item type="Form Event" id="4C15A9D545C64533B59813BA61202847" action="add">
+    <form_event>onload</form_event>
+    <related_id keyed_name="labs_LoadSharePointDialog" type="Method">
+     <Item type="Method" action="get" select="id">
+      <name>labs_LoadSharePointDialog</name>
+     </Item>
+    </related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="labs_ChooseSharePointItem" type="Form">4ADE82D502A64E879CB67E2A700B14CA</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

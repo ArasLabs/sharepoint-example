@@ -1,0 +1,223 @@
+﻿<AML>
+ <Item type="Form" id="D95D1B10CE6D47CDB7AE755108DBA13D" action="add">
+  <category_form>0</category_form>
+  <height>265</height>
+  <stylesheet><![CDATA[../styles/default.css]]></stylesheet>
+  <width>759</width>
+  <name>Document</name>
+  <Relationships>
+   <Item type="Body" id="1616C23245254BAD80BECBEC29A02D16" action="add">
+    <bg_color>#FFFFFF</bg_color>
+    <css>#A24F8C9EFE934D238C590D472020346D {
+  border:1px solid #4A5568 !important; 
+  background-color: #FFF !important; 
+  color: #4A5568 !important; 
+}
+#A24F8C9EFE934D238C590D472020346D:hover {
+  background-color: #4A5568 !important; 
+  color: #FFF !important; 
+}</css>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="Document" type="Form">D95D1B10CE6D47CDB7AE755108DBA13D</source_id>
+    <Relationships>
+     <Item type="Field" id="3D64D3F95A264F5C87DC86220CB20981" action="add">
+      <border_width>0</border_width>
+      <display_length>114</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>class structure</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Type</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>512</sort_order>
+      <source_id keyed_name="1616C23245254BAD80BECBEC29A02D16" type="Body">1616C23245254BAD80BECBEC29A02D16</source_id>
+      <tab_index>40</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>0</x>
+      <y>90</y>
+      <name>classification</name>
+      <Relationships>
+       <Item type="Field Event" id="274A65AE2631464C8786922977D8AB3F" action="add">
+        <field_event>onchange</field_event>
+        <related_id keyed_name="labs_ShowSharePointFields" type="Method">
+         <Item type="Method" action="get" select="id">
+          <name>labs_ShowSharePointFields</name>
+         </Item>
+        </related_id>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="classification" type="Field">3D64D3F95A264F5C87DC86220CB20981</source_id>
+       </Item>
+      </Relationships>
+     </Item>
+     <Item type="Field" id="43EB1AC03C0F4098A61E2156D3198CF4" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family> tahoma,arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[<style>
+  #sharepoint-group {
+    border: 1px solid #CBD5E0; 
+    background-color: #E2E8F0; 
+    height: 232px; 
+    width: 145px;  
+   padding-top: 5px;
+  }
+</style>
+
+<div id="sharepoint-group"> </div>]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">SharePoint Metadata</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>5760</sort_order>
+      <source_id keyed_name="1616C23245254BAD80BECBEC29A02D16" type="Body">1616C23245254BAD80BECBEC29A02D16</source_id>
+      <tab_stop>1</tab_stop>
+      <x>860</x>
+      <y>8</y>
+      <z_index>-100</z_index>
+      <name>sp_group</name>
+     </Item>
+     <Item type="Field" id="51925F03A43F49AF904078BD42A5181A" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>1</is_disabled>
+      <is_visible>0</is_visible>
+      <label xml:lang="en">SharePoint ID</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="sp_id" type="Property">650F2CCA968F4A18BC69CDA50DD9A18E</propertytype_id>
+      <sort_order>5248</sort_order>
+      <source_id keyed_name="1616C23245254BAD80BECBEC29A02D16" type="Body">1616C23245254BAD80BECBEC29A02D16</source_id>
+      <tab_stop>1</tab_stop>
+      <x>875</x>
+      <y>35</y>
+      <z_index>1</z_index>
+      <name>sp_id</name>
+     </Item>
+     <Item type="Field" id="370621274C9948A2BDCC42F375A68A6B" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>1</is_disabled>
+      <is_visible>0</is_visible>
+      <label xml:lang="en">Priority</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="sp_priority" type="Property">E571A1A870384C5C996CAD5B9EBB3AE0</propertytype_id>
+      <sort_order>5376</sort_order>
+      <source_id keyed_name="1616C23245254BAD80BECBEC29A02D16" type="Body">1616C23245254BAD80BECBEC29A02D16</source_id>
+      <tab_stop>1</tab_stop>
+      <x>875</x>
+      <y>80</y>
+      <z_index>1</z_index>
+      <name>sp_priority</name>
+     </Item>
+     <Item type="Field" id="A24F8C9EFE934D238C590D472020346D" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>button</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>0</is_visible>
+      <label xml:lang="en">Refresh Metadata</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>5888</sort_order>
+      <source_id keyed_name="1616C23245254BAD80BECBEC29A02D16" type="Body">1616C23245254BAD80BECBEC29A02D16</source_id>
+      <tab_stop>1</tab_stop>
+      <x>875</x>
+      <y>225</y>
+      <name>sp_refresh</name>
+      <Relationships>
+       <Item type="Field Event" id="6EA9E679CFF844D7936B28D274649090" action="add">
+        <field_event>onclick</field_event>
+        <related_id keyed_name="labs_UpdateSharePointMetadata" type="Method">
+         <Item type="Method" action="get" select="id">
+          <name>labs_UpdateSharePointMetadata</name>
+         </Item>
+        </related_id>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="sp_refresh" type="Field">A24F8C9EFE934D238C590D472020346D</source_id>
+       </Item>
+      </Relationships>
+     </Item>
+     <Item type="Field" id="D07024B8092F41C9BB2116A0DB1BC3D1" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>1</is_disabled>
+      <is_visible>0</is_visible>
+      <label xml:lang="en">Status</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="sp_status" type="Property">7FC576D2EEA543A3B5A931E5F17CA3EB</propertytype_id>
+      <sort_order>5504</sort_order>
+      <source_id keyed_name="1616C23245254BAD80BECBEC29A02D16" type="Body">1616C23245254BAD80BECBEC29A02D16</source_id>
+      <tab_stop>1</tab_stop>
+      <x>875</x>
+      <y>125</y>
+      <z_index>1</z_index>
+      <name>sp_status</name>
+     </Item>
+     <Item type="Field" id="1955ED68BAA9491695CA8C2D4E938C04" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>1</is_disabled>
+      <is_visible>0</is_visible>
+      <label xml:lang="en">Team</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="sp_team" type="Property">B6EF0AE1C40141C4A3F6CAD68A4E3320</propertytype_id>
+      <sort_order>5632</sort_order>
+      <source_id keyed_name="1616C23245254BAD80BECBEC29A02D16" type="Body">1616C23245254BAD80BECBEC29A02D16</source_id>
+      <tab_stop>1</tab_stop>
+      <x>875</x>
+      <y>170</y>
+      <z_index>1</z_index>
+      <name>sp_team</name>
+     </Item>
+    </Relationships>
+   </Item>
+   <Item type="Form Event" id="555026D5F02B404CA794B36D5D28DD80" action="add">
+    <form_event>onformpopulated</form_event>
+    <related_id keyed_name="labs_ShowSharePointFields" type="Method">
+     <Item type="Method" action="get" select="id">
+      <name>labs_ShowSharePointFields</name>
+     </Item>
+    </related_id>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="Document" type="Form">D95D1B10CE6D47CDB7AE755108DBA13D</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

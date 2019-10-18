@@ -1,0 +1,21 @@
+﻿<AML>
+ <Item type="Method" id="789269AB38B04C738FEF7FD08BC17418" action="add">
+  <comments>Shows SharePoint metadata fields on Documents with the SharePoint classification</comments>
+  <execution_allowed_to keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</execution_allowed_to>
+  <method_code><![CDATA[let fieldNames = ['sp_id','sp_priority','sp_status','sp_team','sp_group','sp_refresh'];
+
+if (document.thisItem.getProperty('classification','') === 'SharePoint') {
+    fieldNames.forEach(function(name) {
+        let field = getFieldByName(name);
+        field.style.visibility = 'visible';
+    });
+} else {
+    fieldNames.forEach(function(name) {
+        let field = getFieldByName(name);
+        field.style.visibility = 'hidden';
+    });
+}]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>labs_ShowSharePointFields</name>
+ </Item>
+</AML>

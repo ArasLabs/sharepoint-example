@@ -1,0 +1,129 @@
+﻿<AML>
+ <Item type="ItemType" id="B88C14B99EF449828C5D926E39EE8B89" action="add">
+  <allow_private_permission>1</allow_private_permission>
+  <auto_search>0</auto_search>
+  <class_structure><![CDATA[<class id="B88C14B99EF449828C5D926E39EE8B89"><class name="Drawing" id="8B176CD37558A7F76BB5E0DB670B1B61" /><class name="CAD Model" id="D724E3D6F56931629D758000ED6C47D4" /><class name="Specification" id="B9FA37397257546FF49159A01E8E90F8" /><class name="Software" id="682BC79FB50DCD9B5BDD47E94928DFEA" /><class name="Miscellaneous" id="5C54253BFF858649508647FFE274E5B4" /><class id="BC1087B0D09746DFA7D3F49C7522914E" name="Product" /><class id="DDFA6ECFA05944D5A25D2DBAAB01FA3E" name="Project" /><class id="A0C27A016E814CAB86E28AEF1462B841" name="General" /><class id="BDDFFB63F2D1448498F650F1F248AF8C" name="Email" /><class id="BD5995FECE7849F39836160424E4D905" name="Process" /><class id="A0CA02E683A3477EA79BEA2ED733016B" name="Ad-hoc" /><class id="498BB7AAA3BC458E9325FC1A35629AFD" name="SharePoint" /></class>]]></class_structure>
+  <close_icon>../images/Document.svg</close_icon>
+  <default_page_size>25</default_page_size>
+  <enforce_discovery>1</enforce_discovery>
+  <help_url xml:lang="en">mergedProjects/ProductEngineering/plm_Documents.htm</help_url>
+  <hide_where_used>0</hide_where_used>
+  <history_template keyed_name="Default" type="History Template">3BC16EF9E52B4F9792AB76BCE0492F29</history_template>
+  <implementation_type>table</implementation_type>
+  <instance_data>DOCUMENT</instance_data>
+  <is_dependent>0</is_dependent>
+  <is_relationship>0</is_relationship>
+  <is_versionable>1</is_versionable>
+  <label xml:lang="en">Document</label>
+  <label_plural xml:lang="en">Documents</label_plural>
+  <large_icon>../images/Document.svg</large_icon>
+  <manual_versioning>0</manual_versioning>
+  <open_icon>../images/Document.svg</open_icon>
+  <revisions keyed_name="Default" type="Revision">7FE395DD8B9F4E1090756A34B733D75E</revisions>
+  <show_parameters_tab>0</show_parameters_tab>
+  <structure_view>tabs on</structure_view>
+  <unlock_on_logout>0</unlock_on_logout>
+  <use_src_access>0</use_src_access>
+  <name>Document</name>
+  <Relationships>
+   <Item type="Property" id="650F2CCA968F4A18BC69CDA50DD9A18E" action="add">
+    <class_path>SharePoint</class_path>
+    <column_alignment>left</column_alignment>
+    <data_type>string</data_type>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">SharePoint ID</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>104224</sort_order>
+    <source_id keyed_name="Document" type="ItemType" name="Document">B88C14B99EF449828C5D926E39EE8B89</source_id>
+    <stored_length>64</stored_length>
+    <track_history>0</track_history>
+    <name>sp_id</name>
+   </Item>
+   <Item type="Property" id="7DF8BD6EC60C436EB73D084719AE3EDD" action="add">
+    <column_alignment>left</column_alignment>
+    <data_type>string</data_type>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">SharePoint List Id</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>104736</sort_order>
+    <source_id keyed_name="Document" type="ItemType" name="Document">B88C14B99EF449828C5D926E39EE8B89</source_id>
+    <stored_length>64</stored_length>
+    <track_history>0</track_history>
+    <name>sp_list_id</name>
+   </Item>
+   <Item type="Property" id="E571A1A870384C5C996CAD5B9EBB3AE0" action="add">
+    <class_path>SharePoint</class_path>
+    <column_alignment>left</column_alignment>
+    <data_type>integer</data_type>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">SharePoint Priority</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>104352</sort_order>
+    <source_id keyed_name="Document" type="ItemType" name="Document">B88C14B99EF449828C5D926E39EE8B89</source_id>
+    <track_history>0</track_history>
+    <name>sp_priority</name>
+   </Item>
+   <Item type="Property" id="7FC576D2EEA543A3B5A931E5F17CA3EB" action="add">
+    <class_path>SharePoint</class_path>
+    <column_alignment>left</column_alignment>
+    <data_type>string</data_type>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">SharePoint Status</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>104480</sort_order>
+    <source_id keyed_name="Document" type="ItemType" name="Document">B88C14B99EF449828C5D926E39EE8B89</source_id>
+    <stored_length>32</stored_length>
+    <track_history>0</track_history>
+    <name>sp_status</name>
+   </Item>
+   <Item type="Property" id="B6EF0AE1C40141C4A3F6CAD68A4E3320" action="add">
+    <class_path>SharePoint</class_path>
+    <column_alignment>left</column_alignment>
+    <data_type>string</data_type>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">SharePoint Team</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>104608</sort_order>
+    <source_id keyed_name="Document" type="ItemType" name="Document">B88C14B99EF449828C5D926E39EE8B89</source_id>
+    <stored_length>64</stored_length>
+    <track_history>0</track_history>
+    <name>sp_team</name>
+   </Item>
+   <Item type="Item Action" id="8B5FAE00DC4C4B2D96E1D1FDC20CB8F1" action="add">
+    <related_id keyed_name="labs_NewDocFromSharePoint" type="Action">44136D97DBDC4CC6B2276BB7DF4732F0</related_id>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="Document" type="ItemType" name="Document">B88C14B99EF449828C5D926E39EE8B89</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

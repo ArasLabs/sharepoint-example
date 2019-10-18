@@ -1,0 +1,109 @@
+﻿<AML>
+ <Item type="Method" id="45D984D885484AB39F16FA5B6D5C91F1" action="add">
+  <comments>Loads a dialog for choosing a SharePoint item then creates a new Document</comments>
+  <execution_allowed_to keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</execution_allowed_to>
+  <method_code><![CDATA[// This method calls a custom form dialog to allow the user to login to SharePoint
+// and choose an item. The item data is then passed to the dialog's callback method,
+// where a new Document is created using the labs_SharePointConfiguration item to
+// map SharePoint metadata into the Document properties.
+
+var topWnd = aras.getMostTopWindowWithAras(window);
+topWnd = topWnd.main || topWnd;
+
+// get form
+var formName = 'labs_ChooseSharePointItem';
+var fetchForm = this.getInnovator().newItem('Form', 'get');
+fetchForm.setProperty('name', formName);
+fetchForm = fetchForm.apply('get');
+
+if (fetchForm.isError()) {
+    return alert("Can't find a form called " + formName);
+}
+    
+// get form params
+var params = {
+    title: 'Choose a Document',
+    formId: fetchForm.getID(), // put your form's id here
+    aras: aras,
+    itemTypeId: 'B88C14B99EF449828C5D926E39EE8B89',
+    dialogWidth: 410, // set width int
+    dialogHeight: 410, // set height int
+    content: 'ShowFormAsADialog.html'
+};
+
+// this function contains the logic for creating the new Document and using the 
+// labs_SharePointConfiguration item to map property data
+var callback = function(spItem) {
+    if (!spItem) {
+        // dialog was cancelled
+        return;
+    }
+    
+    // get the configuration item
+    let configuration = aras.newIOMItem('labs_SharePointConfiguration', 'get');
+    configuration.setID(spItem.config);
+    configuration.createRelationship('labs_SharePointProperties', 'get');
+    configuration = configuration.apply();
+    
+    if (configuration.isError()) {
+        return alert(configuration.getErrorString());
+    }
+    
+    // get the ItemType and metadata mapping from the configuration item
+    let itemTypeName = configuration.getPropertyAttribute('itemtype', 'keyed_name', '');
+    let mappedProperties = configuration.getRelationships('labs_SharePointProperties');
+    let new_doc = aras.newIOMItem(itemTypeName, 'add');
+
+    // map the SharePoint item metadata to the new Aras item
+    for (let i=0; i < mappedProperties.getItemCount(); i++) {
+        let mappedProp = mappedProperties.getItemByIndex(i);
+        let arasPropName = mappedProp.getPropertyAttribute('related_id', 'keyed_name');
+        let sharepointPropName = mappedProp.getProperty('sharepoint_property','');
+
+        // admins may assign an Aras sequence value to a property instead of a 
+        // SharePoint metadata field. These mappings start with "Aras sequrence:" 
+        // and include the id of the Aras Sequence item
+        if (sharepointPropName.includes('Aras sequence: ')) {
+            // get sequence
+            let seqId = sharepointPropName.replace('Aras sequence: ', '');
+            let sequence = aras.newIOMItem('Sequence', 'get');
+            sequence.setID(seqId);
+            sequence = sequence.apply();
+            
+            if (sequence.isError()) {
+                return alert(sequence.getErrorString());
+            }
+            
+            // get next sequence value to use for property value
+            let seqName = sequence.getProperty('name','');
+            let inn = aras.newIOMInnovator();
+            let nextValue = inn.getNextSequence(seqName);
+            new_doc.setProperty(arasPropName, nextValue);
+            
+        } else {
+            // 1 to 1 value mapping
+            new_doc.setProperty(arasPropName, spItem.item.fields[sharepointPropName]);
+        }
+    }
+    
+    // if the configuration item includes a classification, set it on the new item
+    let classification = configuration.getProperty('itemtype_class','');
+    if (classification !== '') {
+        new_doc.setProperty('classification', classification);
+    }
+    
+    // add the SharePoint id and save the new Aras item
+    new_doc.setProperty('sp_list_id', spItem.list);
+    new_doc = new_doc.apply();
+    
+    // show the new item's form in a new tab
+    aras.uiShowItemEx(new_doc.node);
+};
+
+// call form in dialog
+topWnd.ArasModules.MaximazableDialog.show('iframe', params).promise.then(callback);
+return null;]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>labs_CreateDocFromSharePoint</name>
+ </Item>
+</AML>

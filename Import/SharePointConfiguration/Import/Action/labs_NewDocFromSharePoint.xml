@@ -1,0 +1,15 @@
+﻿<AML>
+ <Item type="Action" id="44136D97DBDC4CC6B2276BB7DF4732F0" action="add">
+  <item_query />
+  <label xml:lang="en">Create Document from SharePoint</label>
+  <location>client</location>
+  <method keyed_name="labs_CreateDocFromSharePoint" type="Method">
+   <Item type="Method" action="get" select="id">
+    <name>labs_CreateDocFromSharePoint</name>
+   </Item>
+  </method>
+  <target>none</target>
+  <type>itemtype</type>
+  <name>labs_NewDocFromSharePoint</name>
+ </Item>
+</AML>

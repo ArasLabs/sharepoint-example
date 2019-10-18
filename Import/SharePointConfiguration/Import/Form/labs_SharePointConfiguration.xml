@@ -1,0 +1,164 @@
+﻿<AML>
+ <Item type="Form" id="49E80D0B175C4F679DDF8ECE7B3FDC2A" action="add">
+  <category_form>0</category_form>
+  <height>234</height>
+  <stylesheet><![CDATA[../styles/default.css]]></stylesheet>
+  <width>699</width>
+  <name>labs_SharePointConfiguration</name>
+  <Relationships>
+   <Item type="Body" id="420C91AF6E1243F1AE3A03ABF54F439A" action="add">
+    <bg_color>#FFFFFF</bg_color>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="labs_SharePointConfiguration" type="Form">49E80D0B175C4F679DDF8ECE7B3FDC2A</source_id>
+    <Relationships>
+     <Item type="Field" id="BAACF63892FC4739AC04F93E33D61B2D" action="add">
+      <border_width>0</border_width>
+      <display_length>300</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Client ID</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="client_id" type="Property">4301165A0244442DB6DD727B0F3F273A</propertytype_id>
+      <sort_order>512</sort_order>
+      <source_id keyed_name="420C91AF6E1243F1AE3A03ABF54F439A" type="Body">420C91AF6E1243F1AE3A03ABF54F439A</source_id>
+      <tab_index>3456</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>10</x>
+      <y>100</y>
+      <name>client_id</name>
+     </Item>
+     <Item type="Field" id="9D1DB827227C40B69CFFB1BD6D146F1F" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>item</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">ItemType</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="420C91AF6E1243F1AE3A03ABF54F439A" type="Body">420C91AF6E1243F1AE3A03ABF54F439A</source_id>
+      <tab_index>128</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>10</x>
+      <y>190</y>
+      <name>itemtype</name>
+     </Item>
+     <Item type="Field" id="9EC5FF688CF6499EA092E69F60D64218" action="add">
+      <border_width>0</border_width>
+      <display_length>150</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Classification</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="itemtype_class" type="Property">AC0C0ED38D604B4C91F2D518C54A4E19</propertytype_id>
+      <sort_order>768</sort_order>
+      <source_id keyed_name="420C91AF6E1243F1AE3A03ABF54F439A" type="Body">420C91AF6E1243F1AE3A03ABF54F439A</source_id>
+      <tab_stop>1</tab_stop>
+      <x>160</x>
+      <y>190</y>
+      <name>itemtype_class</name>
+     </Item>
+     <Item type="Field" id="1EB79F609F404552900981944C01B522" action="add">
+      <border_width>0</border_width>
+      <display_length>300</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Name</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="name" type="Property">E340A056290C421C97DB5F179DC57BA5</propertytype_id>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="420C91AF6E1243F1AE3A03ABF54F439A" type="Body">420C91AF6E1243F1AE3A03ABF54F439A</source_id>
+      <tab_index>3200</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>10</x>
+      <y>10</y>
+      <name>name</name>
+     </Item>
+     <Item type="Field" id="AB64523CBB514098A705DAE43832BCBB" action="add">
+      <border_width>0</border_width>
+      <display_length>300</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">SharePoint Site</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="sharepoint_site" type="Property">6F1BAA79A54946E5A8C9F25248F1ED64</propertytype_id>
+      <sort_order>384</sort_order>
+      <source_id keyed_name="420C91AF6E1243F1AE3A03ABF54F439A" type="Body">420C91AF6E1243F1AE3A03ABF54F439A</source_id>
+      <tab_index>3328</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>350</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>10</x>
+      <y>55</y>
+      <name>sharepoint_site</name>
+     </Item>
+     <Item type="Field" id="752B17A7792540ED83CC88ADE7F14105" action="add">
+      <border_width>0</border_width>
+      <display_length>300</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Tenant ID</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="tenant_id" type="Property">089AB68874BA409E9121550EA16423A3</propertytype_id>
+      <sort_order>640</sort_order>
+      <source_id keyed_name="420C91AF6E1243F1AE3A03ABF54F439A" type="Body">420C91AF6E1243F1AE3A03ABF54F439A</source_id>
+      <tab_index>3584</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>10</x>
+      <y>145</y>
+      <name>tenant_id</name>
+     </Item>
+    </Relationships>
+   </Item>
+  </Relationships>
+ </Item>
+ <Item type="Field" id="9D1DB827227C40B69CFFB1BD6D146F1F" action="edit">
+  <!-- Please note: this AML depends on the "labs_SharePointConfiguration" ItemType. Please make sure it exists before running this. -->
+  <propertytype_id>
+   <Item type="Property" action="get" select="id">
+    <name>itemtype</name>
+    <source_id type="ItemType" keyed_name="labs_SharePointConfiguration">D749BC458188412F850F5FD9E44913CF</source_id>
+   </Item>
+  </propertytype_id>
+ </Item>
+</AML>
