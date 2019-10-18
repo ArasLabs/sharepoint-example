@@ -62,6 +62,13 @@ In order to send requests to the Microsoft Graph API, we need to register an app
 2. Copy the `..\sharepoint-example\CodeTree\Innovator\` folder in your local repository.
 3. Paste this folder to the root of your code tree.
 	* This should be the same folder that contains the `InnovatorServerConfig.xml`.
+4. Add the following line to `Innovator\Client\Modules\aras.innovator.core.Form\Views\FormInstance.cshtml` in your Innovator installation.
+    ```html
+    <script type="text/javascript" src="@Url.ContentWithSalt("~/javascript/include.aspx?classes=ArasModules,ItemProperty&files=TopWindowHelper")"></script>
+    <script type="text/javascript" src="@Url.ContentWithSalt("~/Modules/aras/field.js")"></script>
+    <!-- added for sharepoint integration -->
+    <script type="text/javascript" src="@Url.ContentWithSalt("~/scripts/SharePoint/msal.js")"></script>
+    ```
 
 #### The Database
 1. Backup your database and store the BAK file in a safe place.
