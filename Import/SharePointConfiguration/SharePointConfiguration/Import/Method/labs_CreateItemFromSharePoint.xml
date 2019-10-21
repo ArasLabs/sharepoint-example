@@ -50,7 +50,7 @@ var callback = function(spItem) {
     }
     
     // get the ItemType and metadata mapping from the configuration item
-    let itemTypeName = configuration.getPropertyAttribute('itemtype', 'keyed_name', '');
+    let itemTypeName = configuration.getPropertyAttribute('mapped_itemtype', 'keyed_name', '');
     let mappedProperties = configuration.getRelationships('labs_SharePointProperties');
     let new_doc = aras.newIOMItem(itemTypeName, 'add');
 
