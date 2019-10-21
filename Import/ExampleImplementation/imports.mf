@@ -3,5 +3,4 @@
     <dependson name="com.aras.innovator.solution.ApplicationCore" />
   </package>
   <package name="aras.labs.SharePointConfiguration.examples" path="examples\Import" />
-  <package name="aras.labs.SharePointConfiguration" path="SharePointConfiguration\Import" />
 </imports>
