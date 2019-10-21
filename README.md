@@ -38,13 +38,13 @@ Project | Aras
 
 1. Aras Innovator installed
 2. Aras Package Import Utility
-3. aras.labs.sharepoint package
+3. aras.labs.SharePointConfiguration package
 4. Code Tree overlay
 5. Administrator access to an Office 365 tenant
 
 ### Install Steps
 
-#### The Office 365 Configuration
+#### The Office 365 Tenant
 In order to send requests to the Microsoft Graph API, we need to register an application with the Office 365 tenant. This allows us to grant permissions and request access tokens without opening up too much access to the SharePoint data. The following application configuration steps are based on [this Microsoft documentation](https://docs.microsoft.com/en-us/graph/auth/auth-concepts). You can find more information [here](https://docs.microsoft.com/en-us/graph/auth-register-app-v2).
 
 1. Go to your [Azure Portal](https://portal.azure.com/) and login as an administrator for the Office 365 tenant.
@@ -77,27 +77,57 @@ In order to send requests to the Microsoft Graph API, we need to register an app
     * _Note: You must login as root for the package import to succeed!_
 4. Enter the package name in the TargetRelease field.
     * Optional: Enter a description in the Description field.
-5. Enter the path to your local `..\sharepoint-example\Import\imports.mf` file in the Manifest File field.
+5. Enter the path to your local `..\sharepoint-example\Import\SharepointConfiguration\imports.mf` file in the Manifest File field.
 6. Select the following in the Available for Import field.
-    * **aras.labs.sharepoint**
+    * **aras.labs.SharePointConfiguration**
 7. Select Type = **Merge** and Mode = **Thorough Mode**.
 8. Click **Import** in the top left corner.
-9. Close the Aras Package Import tool.
+9.  Close the Aras Package Import tool.
 
-#### The Aras Configuration
+**Optional:** 
+This community project also contains an optional package that adds some properties to the OOTB Document ItemType and Form, as well as a Sequence item for generating unique document numbers for items synced from SharePoint. You can import the `..\sharepoint-example\Import\ExampleImplementation\imports.mf` file following steps 1-9 above if you would like to try out this example. 
+
+If you would like to configure a different ItemType or you want more control over the properties and form fields that are added, you can skip this section and follow the **Configuring Your Aras ItemType** section below.
+
+### Configuration Steps
+
+#### Configuring Your ItemType
+This section outlines how you can configure any ItemType to work with this community project. If you imported the optional Example Implementation package, you can skip this section and move on to **Configuring the SharePoint Mapping**.
+
 1. Login to Innovator as admin.
-2. Navigate to **Administration > SharePoint Configurations** and create a new SharePoint Configuration item.
-3. Enter a name for your configuration item, as well as the SharePoint site url. The format should look like this: https://{host}/sites/{site name}.
-4. Copy the **Application (client) ID** field from your app registration in your Azure dashboard and paste it into the Client ID field of the configuration item.
-5. Copy the **Directory (tenant) ID** field from your app registration and paste it into the Tenant ID field.
-6. In the ItemType field, choose the type of item you want to map to SharePoint metadata.
-7. If you want items mapped to SharePoint to have a certain classification, enter it in the Classification field.
-8. In the Mapped Properties grid, add the item properties that you want to map to SharePoint metadata and enter the names of the SharePoint properties.
+2. Navigate to **Administration > ItemTypes** in the TOC and search for the ItemType you want to integrate with SharePoint. Open it for editing.
+3. If you want to assign a specific classification to items synced from SharePoint, click the **Class Structure** button and add the classification in the dialog. Close the dialog when you're done.
+4. Add properties for any metadata properties you want to sync from SharePoint. 
+    * If you added a classification in step 3, select that classification as the class path for each property you add in step 4.
+5. Select the **Actions** relationship tab and add the **labs_NewDocFromSharePoint** action.
+6. Save the ItemType.
+
+#### Configuring Your Form
+1. Select the **Views** relationship tab and open the ItemType's form for editing.
+2. Add fields to the form for each metadata property you want to display.
+    * Tip: For organizational purposes, it's helpful to prefix the name of each field with something to identify them as SharePoint metadata fields.
+    * Tip: Be sure to disable the fields (select "Disable" under the **Field Physical** tab), that way users understand that the data is read-only from SharePoint and cannot be updated from Innovator.
+3. Add a button field to allow the user to refresh the metadata properies from SharePoint.
+4. Under the **Field Events** tab, add the **labs_UpdateSharePointMetadata** method as an onClick event for your button field.
+5. Under the **Form Events** tab, add the **labs_ShowSharePointFields** method as an onFormPopulated event.
+6. Open the **labs_ShowSharePointFields** method for editing.
+7. In the fieldNames array, replace the example field names with the names of the metadata fields you added to your form.
+8. Save and close the method.
+9. Save and close the form.
+
+#### Configuring the SharePoint Mapping
+1. Navigate to **Administration > SharePoint Configurations** in the TOC and create a new SharePoint Configuration item.
+2. Enter a name for your configuration item, as well as the SharePoint site url. The format should look like this: https://{host}/sites/{site name}.
+3. Copy the **Application (client) ID** field from your app registration in your Azure dashboard and paste it into the Client ID field of the configuration item.
+4. Copy the **Directory (tenant) ID** field from your app registration and paste it into the Tenant ID field.
+5. In the ItemType field, choose the type of item you want to map to SharePoint metadata.
+6. If you want items mapped to SharePoint to have a certain classification, enter it in the Classification field.
+7. In the Mapped Properties grid, add the item properties that you want to map to SharePoint metadata and enter the names of the SharePoint properties.
     * Note: If you want to assign a unique Aras sequence value to a property on the Aras item, you can use the following syntax. "Aras sequence: {id}"
 
     ![Property Mapping](Screenshots/property-mapping.png)
 
-9. Save and close the SharePoint Configuration item.
+8. Save and close the SharePoint Configuration item.
 
 ## Usage
 
