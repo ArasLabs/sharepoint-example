@@ -99,7 +99,7 @@ This section outlines how you can configure any ItemType to work with this commu
 3. If you want to assign a specific classification to items synced from SharePoint, click the **Class Structure** button and add the classification in the dialog. Close the dialog when you're done.
 4. Add properties for any metadata properties you want to sync from SharePoint. 
     * If you added a classification in step 3, select that classification as the class path for each property you add in step 4.
-5. Select the **Actions** relationship tab and add the **labs_NewDocFromSharePoint** action.
+5. Select the **Actions** relationship tab and add the **labs_NewItemFromSharePoint** action.
 6. Save the ItemType.
 
 #### Configuring Your Form
