@@ -139,7 +139,7 @@ This section outlines how you can configure any ItemType to work with this commu
 
 1. Login to Innovator.
 2. In the TOC, navigate to the ItemType that you've mapped to SharePoint.
-3. Right click anywhere in the search grid area and select **Create Document from SharePoint**.
+3. Right click anywhere in the search grid area and select **Create Item from SharePoint**.
 4. Click the **sign in** button in the top right corner of the dialog and enter your SharePoint credentials.
     * You'll only need to do this the first time you run the action after logging into Innovator.
     * If you've signed into SharePoint inside of Innovator before but not in the current session, the dialog will briefly appear and then disappear. This is a known issue with this release. Just run the action again as a workaround and you'll be able to login as expected.
