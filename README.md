@@ -98,6 +98,7 @@ This section outlines how you can configure any ItemType to work with this commu
 2. Navigate to **Administration > ItemTypes** in the TOC and search for the ItemType you want to integrate with SharePoint. Open it for editing.
 3. If you want to assign a specific classification to items synced from SharePoint, click the **Class Structure** button and add the classification in the dialog. Close the dialog when you're done.
 4. Add properties for any metadata properties you want to sync from SharePoint. 
+    ![Add properties to ItemType](Screenshots/add-properties-to-itemtype.png)
     * If you added a classification in step 3, select that classification as the class path for each property you add in step 4.
 5. Select the **Actions** relationship tab and add the **labs_NewItemFromSharePoint** action.
 6. Save the ItemType.
@@ -105,6 +106,7 @@ This section outlines how you can configure any ItemType to work with this commu
 #### Configuring Your Form
 1. Select the **Views** relationship tab and open the ItemType's form for editing.
 2. Add fields to the form for each metadata property you want to display.
+    ![Add fields to form](Screenshots/add-fields-to-form.png)
     * Tip: For organizational purposes, it's helpful to prefix the name of each field with something to identify them as SharePoint metadata fields.
     * Tip: Be sure to disable the fields (select "Disable" under the **Field Physical** tab), that way users understand that the data is read-only from SharePoint and cannot be updated from Innovator.
 3. Add a button field to allow the user to refresh the metadata properies from SharePoint.
