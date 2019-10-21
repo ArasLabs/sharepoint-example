@@ -1,11 +1,11 @@
 ﻿<AML>
  <Item type="Method" id="45D984D885484AB39F16FA5B6D5C91F1" action="add">
-  <comments>Loads a dialog for choosing a SharePoint item then creates a new Document</comments>
+  <comments>Loads a dialog for choosing a SharePoint item then creates a new Aras Item</comments>
   <execution_allowed_to keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</execution_allowed_to>
   <method_code><![CDATA[// This method calls a custom form dialog to allow the user to login to SharePoint
 // and choose an item. The item data is then passed to the dialog's callback method,
-// where a new Document is created using the labs_SharePointConfiguration item to
-// map SharePoint metadata into the Document properties.
+// where a new Aras Item is created using the labs_SharePointConfiguration item to
+// map SharePoint metadata into the Aras Item properties.
 
 var topWnd = aras.getMostTopWindowWithAras(window);
 topWnd = topWnd.main || topWnd;
@@ -31,7 +31,7 @@ var params = {
     content: 'ShowFormAsADialog.html'
 };
 
-// this function contains the logic for creating the new Document and using the 
+// this function contains the logic for creating the new Item and using the 
 // labs_SharePointConfiguration item to map property data
 var callback = function(spItem) {
     if (!spItem) {
@@ -104,6 +104,6 @@ var callback = function(spItem) {
 topWnd.ArasModules.MaximazableDialog.show('iframe', params).promise.then(callback);
 return null;]]></method_code>
   <method_type>JavaScript</method_type>
-  <name>labs_CreateDocFromSharePoint</name>
+  <name>labs_CreateItemFromSharePoint</name>
  </Item>
 </AML>

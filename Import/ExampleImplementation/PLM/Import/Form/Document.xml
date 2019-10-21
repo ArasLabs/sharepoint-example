@@ -95,7 +95,7 @@
       <font_size>8pt</font_size>
       <font_weight>bold</font_weight>
       <is_disabled>1</is_disabled>
-      <is_visible>0</is_visible>
+      <is_visible>1</is_visible>
       <label xml:lang="en">SharePoint ID</label>
       <label_position>top</label_position>
       <list_no_blank>0</list_no_blank>
@@ -117,7 +117,7 @@
       <font_size>8pt</font_size>
       <font_weight>bold</font_weight>
       <is_disabled>1</is_disabled>
-      <is_visible>0</is_visible>
+      <is_visible>1</is_visible>
       <label xml:lang="en">Priority</label>
       <label_position>top</label_position>
       <list_no_blank>0</list_no_blank>
@@ -132,6 +132,7 @@
      </Item>
      <Item type="Field" id="A24F8C9EFE934D238C590D472020346D" action="add">
       <border_width>0</border_width>
+      <css />
       <display_length_unit>px</display_length_unit>
       <field_type>button</field_type>
       <font_color>#000000</font_color>
@@ -139,7 +140,7 @@
       <font_size>8pt</font_size>
       <font_weight>bold</font_weight>
       <is_disabled>0</is_disabled>
-      <is_visible>0</is_visible>
+      <is_visible>1</is_visible>
       <label xml:lang="en">Refresh Metadata</label>
       <label_position>top</label_position>
       <list_no_blank>0</list_no_blank>
@@ -171,7 +172,7 @@
       <font_size>8pt</font_size>
       <font_weight>bold</font_weight>
       <is_disabled>1</is_disabled>
-      <is_visible>0</is_visible>
+      <is_visible>1</is_visible>
       <label xml:lang="en">Status</label>
       <label_position>top</label_position>
       <list_no_blank>0</list_no_blank>
@@ -193,7 +194,7 @@
       <font_size>8pt</font_size>
       <font_weight>bold</font_weight>
       <is_disabled>1</is_disabled>
-      <is_visible>0</is_visible>
+      <is_visible>1</is_visible>
       <label xml:lang="en">Team</label>
       <label_position>top</label_position>
       <list_no_blank>0</list_no_blank>
