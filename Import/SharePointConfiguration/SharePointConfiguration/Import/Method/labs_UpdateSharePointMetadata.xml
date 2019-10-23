@@ -32,7 +32,7 @@ itemtype = itemtype.apply();
 */
 
 let configurations = aras.newIOMItem('labs_SharePointConfiguration', 'get');
-configurations.setProperty('itemtype', itemtype.getID());
+configurations.setProperty('mapped_itemtype', itemtype.getID());
 configurations.createRelationship('labs_SharePointProperties', 'get');
 configurations = configurations.apply();
 if (configurations.isError()) {

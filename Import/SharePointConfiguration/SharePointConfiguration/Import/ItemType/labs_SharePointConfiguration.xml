@@ -60,6 +60,25 @@
     <track_history>0</track_history>
     <name>itemtype_class</name>
    </Item>
+   <Item type="Property" id="CD947131E8CF4B76A4DE8146D1C7FD18" action="add">
+    <column_alignment>left</column_alignment>
+    <data_source keyed_name="ItemType" type="ItemType" name="ItemType">450906E86E304F55A34B3C0D65C097EA</data_source>
+    <data_type>item</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>1</is_required>
+    <item_behavior>float</item_behavior>
+    <label xml:lang="en">ItemType</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="labs_SharePointConfiguration" type="ItemType" name="labs_SharePointConfiguration">D749BC458188412F850F5FD9E44913CF</source_id>
+    <track_history>0</track_history>
+    <name>mapped_itemtype</name>
+   </Item>
    <Item type="Property" id="E340A056290C421C97DB5F179DC57BA5" action="add">
     <column_alignment>left</column_alignment>
     <data_type>string</data_type>
@@ -145,29 +164,6 @@
     <related_id keyed_name="labs_SharePointConfiguration" type="Permission">E774D3888AD240A4AF895A69B0676FFF</related_id>
     <sort_order>128</sort_order>
     <source_id keyed_name="labs_SharePointConfiguration" type="ItemType" name="labs_SharePointConfiguration">D749BC458188412F850F5FD9E44913CF</source_id>
-   </Item>
-  </Relationships>
- </Item>
- <Item type="ItemType" id="D749BC458188412F850F5FD9E44913CF" action="edit">
-  <Relationships>
-   <Item type="Property" action="edit" where="source_id='D749BC458188412F850F5FD9E44913CF' and name='itemtype'">
-    <column_alignment>left</column_alignment>
-    <data_source keyed_name="ItemType" type="ItemType" name="ItemType">450906E86E304F55A34B3C0D65C097EA</data_source>
-    <data_type>item</data_type>
-    <is_hidden>0</is_hidden>
-    <is_hidden2>0</is_hidden2>
-    <is_indexed>0</is_indexed>
-    <is_keyed>0</is_keyed>
-    <is_multi_valued>0</is_multi_valued>
-    <is_required>1</is_required>
-    <item_behavior>float</item_behavior>
-    <label xml:lang="en">ItemType</label>
-    <range_inclusive>0</range_inclusive>
-    <readonly>0</readonly>
-    <sort_order>128</sort_order>
-    <source_id keyed_name="labs_SharePointConfiguration" type="ItemType" name="labs_SharePointConfiguration">D749BC458188412F850F5FD9E44913CF</source_id>
-    <track_history>0</track_history>
-    <name>itemtype</name>
    </Item>
   </Relationships>
  </Item>
