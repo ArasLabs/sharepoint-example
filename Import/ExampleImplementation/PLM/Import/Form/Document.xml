@@ -81,7 +81,7 @@
       <sort_order>5760</sort_order>
       <source_id keyed_name="1616C23245254BAD80BECBEC29A02D16" type="Body">1616C23245254BAD80BECBEC29A02D16</source_id>
       <tab_stop>1</tab_stop>
-      <x>860</x>
+      <x>550</x>
       <y>8</y>
       <z_index>-100</z_index>
       <name>sp_group</name>
@@ -103,7 +103,7 @@
       <sort_order>5248</sort_order>
       <source_id keyed_name="1616C23245254BAD80BECBEC29A02D16" type="Body">1616C23245254BAD80BECBEC29A02D16</source_id>
       <tab_stop>1</tab_stop>
-      <x>875</x>
+      <x>565</x>
       <y>35</y>
       <z_index>1</z_index>
       <name>sp_id</name>
@@ -125,7 +125,7 @@
       <sort_order>5376</sort_order>
       <source_id keyed_name="1616C23245254BAD80BECBEC29A02D16" type="Body">1616C23245254BAD80BECBEC29A02D16</source_id>
       <tab_stop>1</tab_stop>
-      <x>875</x>
+      <x>565</x>
       <y>80</y>
       <z_index>1</z_index>
       <name>sp_priority</name>
@@ -147,7 +147,7 @@
       <sort_order>5888</sort_order>
       <source_id keyed_name="1616C23245254BAD80BECBEC29A02D16" type="Body">1616C23245254BAD80BECBEC29A02D16</source_id>
       <tab_stop>1</tab_stop>
-      <x>875</x>
+      <x>565</x>
       <y>225</y>
       <name>sp_refresh</name>
       <Relationships>
@@ -180,7 +180,7 @@
       <sort_order>5504</sort_order>
       <source_id keyed_name="1616C23245254BAD80BECBEC29A02D16" type="Body">1616C23245254BAD80BECBEC29A02D16</source_id>
       <tab_stop>1</tab_stop>
-      <x>875</x>
+      <x>565</x>
       <y>125</y>
       <z_index>1</z_index>
       <name>sp_status</name>
@@ -202,7 +202,7 @@
       <sort_order>5632</sort_order>
       <source_id keyed_name="1616C23245254BAD80BECBEC29A02D16" type="Body">1616C23245254BAD80BECBEC29A02D16</source_id>
       <tab_stop>1</tab_stop>
-      <x>875</x>
+      <x>565</x>
       <y>170</y>
       <z_index>1</z_index>
       <name>sp_team</name>
